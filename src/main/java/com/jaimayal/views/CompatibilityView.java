@@ -1,6 +1,6 @@
 package com.jaimayal.views;
 
-import com.jaimayal.controllers.CompatibilityController;
+import com.jaimayal.controllers.HoroscopeController;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,7 +10,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class CompatibilityView extends JFrame {
-    private final CompatibilityController compatibilityController;
+    private final HoroscopeController compatibilityController;
     private final JScrollPane mainScrollPane;
     private final JButton compatiblityButton;
     private final JButton backButton;
@@ -21,33 +21,28 @@ public class CompatibilityView extends JFrame {
     
     public CompatibilityView() {
         super("Compatibility");
-        this.compatibilityController = new CompatibilityController();
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.getContentPane().setLayout(null);
+        this.compatibilityController = new HoroscopeController();
         
         this.mainScrollPane = new JScrollPane();
         this.compatibilityResultsArea = new JTextArea();
-        this.initializeCompatibilityResultsArea();
-        this.getContentPane().add(this.mainScrollPane);
-        
         this.compatiblityButton = new JButton();
-        this.initializeCompatibilityButton();
-        this.getContentPane().add(this.compatiblityButton);
-        
         this.backButton = new JButton();
-        this.initializeBackButton();
-        this.getContentPane().add(this.backButton);
-        
         this.horoscopeLabel = new JLabel();
-        this.initializeHoroscopeLabel();
-        this.getContentPane().add(this.horoscopeLabel);
-        
         this.horoscopeField = new JFormattedTextField();
-        this.initializeHoroscopeFormattedTextField();
-        this.getContentPane().add(this.horoscopeField);
-        
-        this.pack();
+
+        this.setSize(680, 530);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.display();
+        this.getContentPane().setLayout(null);
         this.setVisible(true);
+    }
+    
+    private void display() {
+        this.initializeBackButton();
+        this.initializeCompatibilityButton();
+        this.initializeCompatibilityResultsArea();
+        this.initializeHoroscopeFormattedTextField();
+        this.initializeHoroscopeLabel();
     }
     
     private void initializeCompatibilityResultsArea() {
@@ -55,6 +50,7 @@ public class CompatibilityView extends JFrame {
         this.compatibilityResultsArea.setRows(5);
         this.mainScrollPane.setViewportView(this.compatibilityResultsArea);
         this.mainScrollPane.setBounds(320, 220, 310, 90);
+        this.add(this.mainScrollPane);
     }
     
     private void initializeCompatibilityButton() {
@@ -68,6 +64,7 @@ public class CompatibilityView extends JFrame {
                 compatibilityButtonTriggered();
             }
         });
+        this.add(this.compatiblityButton);
     }
 
     private void compatibilityButtonTriggered() {
@@ -76,6 +73,7 @@ public class CompatibilityView extends JFrame {
         String compatibility = this.compatibilityController.getCompatibility(horoscope);
         System.out.println(compatibility);
         this.compatibilityResultsArea.setText(compatibility);
+        this.add(this.mainScrollPane);
     }
     
     private void initializeBackButton() {
@@ -90,11 +88,13 @@ public class CompatibilityView extends JFrame {
                 backButtonTriggered();
             }
         });
+        this.add(this.backButton);
     }
     
     private void backButtonTriggered() {
         this.dispose();
-        System.out.println("Back button triggered");
+        HomeView homeView = new HomeView();
+        homeView.setLocationRelativeTo(this);
     }
     
     private void initializeHoroscopeFormattedTextField() {
@@ -105,6 +105,7 @@ public class CompatibilityView extends JFrame {
                 horoscopeFieldKeyTyped(e);
             }
         });
+        this.add(this.horoscopeField);
     }
     
     private void horoscopeFieldKeyTyped(KeyEvent e) {
@@ -119,6 +120,7 @@ public class CompatibilityView extends JFrame {
         this.horoscopeLabel.setForeground(new Color(255, 255, 255));
         this.horoscopeLabel.setText("Escribe tu horoscopo:");
         this.horoscopeLabel.setBounds(20, 220, 160, 30);
+        this.add(this.horoscopeLabel);
     }
 
     public static void main(String[] args) {
