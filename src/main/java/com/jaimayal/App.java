@@ -1,11 +1,17 @@
 package com.jaimayal;
 
+import com.jaimayal.views.HomeView;
+
 import javax.swing.*;
 
-public class App extends JFrame {
-    
+public class App {
+    private HomeView homeView;
     
     public void run() {
-        System.out.println("Hello World!");
+        this.homeView = new HomeView();
+    }
+
+    public static void main(String[] args) {
+        new App().run();
     }
 }
