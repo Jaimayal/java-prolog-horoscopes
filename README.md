@@ -1,7 +1,7 @@
 # Horoscopes App
 This project is intended to showcase how to connect a Prolog Knowledge Base and a Java application using the [JPL library](https://jpl7.org/index). 
 
-All the JPL code is located in the [HoroscopeJPLAdapter](./src/main/java/com/jaimayal/jpl_wrapper/HoroscopeJPLAdapter.java) class. You can read more about this library [here](https://jpl7.org/index).
+All the JPL code is located in the [HoroscopeJPLAdapter](./src/main/java/com/jaimayal/jpl_wrapper/HoroscopeJPLAdapter.java) class. You can read more about the library [here](https://jpl7.org/index).
 
 ## How to run
 1. Install [SWI-Prolog](https://www.swi-prolog.org/)
