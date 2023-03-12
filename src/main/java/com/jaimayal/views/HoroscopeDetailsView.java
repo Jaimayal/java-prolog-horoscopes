@@ -72,7 +72,7 @@ public class HoroscopeDetailsView extends JFrame {
     private void initializeHoroscopeLabel() {
         this.horoscopeLabel.setFont(new Font("Rockwell", Font.BOLD, 18));
         this.horoscopeLabel.setBackground(new Color(255, 255, 255));
-        this.horoscopeLabel.setForeground(new Color(255, 255, 255));
+        this.horoscopeLabel.setForeground(new Color(0, 0, 0));
         this.horoscopeLabel.setText("Escribe tu signo:");
         this.horoscopeLabel.setBounds(20, 230, 150, 50);
         this.add(this.horoscopeLabel);

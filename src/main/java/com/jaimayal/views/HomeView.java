@@ -54,17 +54,25 @@ public class HomeView extends JFrame {
         this.initializeResultHoroscopeLabel();
         this.initializeHoroscopeShowcaseViewButton();
     }
+
+    private void initializeDayLabel() {
+        this.dayLabel.setText("Día:");
+        this.dayLabel.setBounds(140, 250, 70, 40);
+        this.dayLabel.setFont(new Font("Rockwell", Font.BOLD, 24));
+        this.dayLabel.setForeground(new Color(0, 0, 0));
+        this.add(this.dayLabel);
+    }
     
     private void initializeMonthLabel() {
         this.monthLabel.setText("No. Mes:");
-        this.monthLabel.setBounds(30, 300, 110, 30);
+        this.monthLabel.setBounds(80, 300, 110, 30);
         this.monthLabel.setFont(new Font("Rockwell", Font.BOLD, 24));
-        this.monthLabel.setForeground(new Color(255, 255, 255));
+        this.monthLabel.setForeground(new Color(0, 0, 0));
         this.add(this.monthLabel);
     }
     
     private void initializeDayField() {
-        this.dayField.setBounds(30, 300, 110, 30);
+        this.dayField.setBounds(200, 260, 110, 30);
         this.dayField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 dayKeyTyped(evt);
@@ -74,7 +82,7 @@ public class HomeView extends JFrame {
     }
     
     private void initializeMonthField() {
-        this.monthField.setBounds(150, 300, 100, 30);
+        this.monthField.setBounds(200, 300, 100, 30);
         this.monthField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 monthKeyTyped(evt);
@@ -101,17 +109,11 @@ public class HomeView extends JFrame {
         this.resultHoroscopeLabel.setText("Signo:");
         this.resultHoroscopeLabel.setBounds(250, 330, 300, 40);
         this.resultHoroscopeLabel.setFont(new Font("Trebuchet MS", Font.BOLD, 36));
-        this.resultHoroscopeLabel.setForeground(new Color(255, 255, 255));
+        this.resultHoroscopeLabel.setForeground(new Color(0, 0, 0));
         this.add(this.resultHoroscopeLabel);
     }
     
-    private void initializeDayLabel() {
-        this.dayLabel.setText("Día:");
-        this.dayLabel.setBounds(80, 250, 70, 40);
-        this.dayLabel.setFont(new Font("Rockwell", Font.BOLD, 24));
-        this.dayLabel.setForeground(new Color(255, 255, 255));
-        this.add(this.dayLabel);
-    }
+    
     
     private void initializeRenderHoroscopeDetailsViewButton() {
         this.renderHoroscopeShowcaseViewButton.setText("Mi horoscopo");

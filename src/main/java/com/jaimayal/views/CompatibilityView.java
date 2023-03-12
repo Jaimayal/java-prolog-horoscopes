@@ -49,7 +49,7 @@ public class CompatibilityView extends JFrame {
         this.compatibilityResultsArea.setColumns(20);
         this.compatibilityResultsArea.setRows(5);
         this.mainScrollPane.setViewportView(this.compatibilityResultsArea);
-        this.mainScrollPane.setBounds(320, 220, 310, 90);
+        this.mainScrollPane.setBounds(340, 220, 310, 90);
         this.add(this.mainScrollPane);
     }
     
@@ -57,7 +57,7 @@ public class CompatibilityView extends JFrame {
         this.compatiblityButton.setBackground(new Color(255, 204, 255));
         this.compatiblityButton.setFont(new Font("Rockwell", Font.BOLD, 14));
         this.compatiblityButton.setText("Ver");
-        this.compatiblityButton.setBounds(170, 270, 100, 30);
+        this.compatiblityButton.setBounds(180, 270, 100, 30);
         this.compatiblityButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -81,7 +81,7 @@ public class CompatibilityView extends JFrame {
         this.backButton.setFont(new Font("Rockwell", Font.BOLD, 14));
         this.backButton.setForeground(new Color(204, 0, 204));
         this.backButton.setText("Inicio");
-        this.backButton.setBounds(140, 180, 140, 30);
+        this.backButton.setBounds(180, 180, 140, 30);
         this.backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -98,7 +98,7 @@ public class CompatibilityView extends JFrame {
     }
     
     private void initializeHoroscopeFormattedTextField() {
-        this.horoscopeField.setBounds(140, 220, 140, 30);
+        this.horoscopeField.setBounds(180, 220, 140, 30);
         this.horoscopeField.addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -117,7 +117,7 @@ public class CompatibilityView extends JFrame {
     
     private void initializeHoroscopeLabel() {
         this.horoscopeLabel.setFont(new Font("Rockwell", Font.BOLD, 14));
-        this.horoscopeLabel.setForeground(new Color(255, 255, 255));
+        this.horoscopeLabel.setForeground(new Color(0, 0, 0));
         this.horoscopeLabel.setText("Escribe tu horoscopo:");
         this.horoscopeLabel.setBounds(20, 220, 160, 30);
         this.add(this.horoscopeLabel);

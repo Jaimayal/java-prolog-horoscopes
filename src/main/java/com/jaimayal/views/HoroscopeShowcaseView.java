@@ -82,31 +82,31 @@ public class HoroscopeShowcaseView extends JFrame {
         this.horoscopeTextPaneResult.setBounds(240, 330, 380, 120);
 
         this.horoscopeLabel.setFont(new Font("Rockwell", 1, 36));
-        this.horoscopeLabel.setForeground(new Color(255, 255, 255));
+        this.horoscopeLabel.setForeground(new Color(0, 0, 0));
         this.horoscopeLabel.setText("Horóscopo");
         this.getContentPane().add(this.horoscopeLabel);
         this.horoscopeLabel.setBounds(30, 370, 200, 40);
 
         this.monthLabel.setFont(new Font("Rockwell", 1, 24)); // NOI18N
-        this.monthLabel.setForeground(new Color(255, 255, 255));
+        this.monthLabel.setForeground(new Color(0, 0, 0));
         this.monthLabel.setText("Mes:");
         getContentPane().add(this.monthLabel);
         this.monthLabel.setBounds(30, 130, 70, 40);
 
         this.compatibilityLabel.setFont(new Font("Rockwell", 1, 36)); // NOI18N
-        this.compatibilityLabel.setForeground(new Color(255, 255, 255));
+        this.compatibilityLabel.setForeground(new Color(0, 0, 0));
         this.compatibilityLabel.setText("Compatibilidad");
         getContentPane().add(this.compatibilityLabel);
         this.compatibilityLabel.setBounds(300, 210, 320, 40);
 
         this.horoscopeSignLabel.setFont(new Font("Rockwell", 1, 36)); // NOI18N
-        this.horoscopeSignLabel.setForeground(new Color(255, 255, 255));
+        this.horoscopeSignLabel.setForeground(new Color(0, 0, 0));
         this.horoscopeSignLabel.setText("Signo");
         this.getContentPane().add(this.horoscopeLabel);
         this.horoscopeSignLabel.setBounds(50, 250, 140, 40);
 
         this.dayLabel.setFont(new Font("Rockwell", 1, 24)); // NOI18N
-        this.dayLabel.setForeground(new Color(255, 255, 255));
+        this.dayLabel.setForeground(new Color(0, 0, 0));
         this.dayLabel.setText("Dia:");
         this.getContentPane().add(this.dayLabel);
         this.dayLabel.setBounds(40, 90, 70, 40);
