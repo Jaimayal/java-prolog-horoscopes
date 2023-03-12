@@ -155,9 +155,4 @@ public class HoroscopeShowcaseView extends JFrame {
         HomeView homeView = new HomeView();
         homeView.setLocationRelativeTo(this);
     }
-
-    public static void main(String[] args) {
-        HoroscopeShowcaseView horoscopeShowcaseView = new HoroscopeShowcaseView();
-        
-    }
 }

@@ -122,8 +122,4 @@ public class CompatibilityView extends JFrame {
         this.horoscopeLabel.setBounds(20, 220, 160, 30);
         this.add(this.horoscopeLabel);
     }
-
-    public static void main(String[] args) {
-        new CompatibilityView();
-    }
 }

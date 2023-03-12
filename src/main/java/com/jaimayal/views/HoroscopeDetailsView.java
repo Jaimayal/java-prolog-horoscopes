@@ -101,8 +101,4 @@ public class HoroscopeDetailsView extends JFrame {
         String horoscopeDetails = this.fullHoroscopeDetailsController.getHoroscopeDetails(horoscope);
         this.horoscopeDetailsResultArea.setText(horoscopeDetails);
     }
-
-    public static void main(String[] args) {
-        HoroscopeDetailsView horoscopeDetailsView = new HoroscopeDetailsView();
-    }
 }
